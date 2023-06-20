@@ -232,6 +232,8 @@ header section.search-box form nav a {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   padding: 30px 0;
 }
 footer section {
@@ -240,8 +242,15 @@ footer section {
   gap: 20px;
 }
 footer section figure {
-  width: 7%;
   overflow: hidden;
+}
+footer section figure a {
+  display: block;
+  width: 88px;
+}
+footer section figure a img {
+  width: 100%;
+  height: auto;
 }
 footer section div {
   display: flex;
@@ -275,6 +284,20 @@ footer section div a:nth-of-type(1)::after {
   display: block;
   border-right: 1px solid #000;
   margin-left: 20px;
+}
+footer nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+footer nav ul li {
+  min-width: 120px;
+  text-align: center;
+  padding: 0 1%;
+}
+footer nav ul li a {
+  font-family: "SamsungSharpSans-Medium";
+  font-size: 14px;
+  font-weight: 400;
 }
 
 main article:nth-of-type(1) {
@@ -385,6 +408,11 @@ main > figure {
   margin: 100px auto;
 }
 main > figure video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main > figure img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
