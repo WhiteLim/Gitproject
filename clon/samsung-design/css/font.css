@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'SamsungOneKorean-400';
+    src: url('./font/SamsungOneKorean-400.woff');
+}
+
+@font-face {
+    font-family: 'SamsungOneKorean-700';
+    src: url('./font/SamsungOneKorean-700.woff');
+}
+
+@font-face {
+    font-family: 'SamsungOneLatin-400';
+    src: url('./font/SamsungOneLatin-400.woff2');
+}
+
+@font-face {
+    font-family: 'SamsungSharpSans-Bold';
+    src: url('./font/SamsungSharpSans-Bold.woff');
+}
+
+@font-face {
+    font-family: 'SamsungSharpSans-Medium';
+    src: url('./font/SamsungSharpSans-Medium.woff');
+}
+
+@font-face {
+    font-family: 'SamsungSharpSans-Regular';
+    src: url('./font/SamsungSharpSans-Regular.woff');
+}

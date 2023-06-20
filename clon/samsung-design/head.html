@@ -1,0 +1,70 @@
+<section>
+    <div class="header-left">
+        <figure><a href="#"><img src="./tools/main/header-logo-samsung-design-svg.svg" alt="logo"></a></figure>
+        <nav>
+            <ul>
+                <li><a href="#"></a>Our Stories</a></li>
+                <li><a href="#"></a>About us</a></li>
+                <li><a href="#"></a>Career</a></li>
+                <li><a href="#"></a>News</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-right">
+        <div class="h-stb">
+            <div class="stb-box">
+                <a href="#">#Sustainable_Design</a>
+                <a href="#">#History_of_Refrigerators</a>
+                <a href="#">#Interview_with_Designers</a>
+                <a href="#">#Path_of_Innovation</a>
+                <a href="#">#Colorful_Thoughts</a>
+                <a href="#">#Sustainable_Design</a>
+            </div>
+        </div>
+        <div class="h-icon">
+            <span id="search"></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+
+<section class="search-box">
+    <form>
+        <div>
+            <input type="text" name="search" id="search" placeholder="Input Keyword">
+            <label for="search"></label>
+        </div>
+        <nav>
+            <a href="#">Galaxy 23</a>
+            <a href="#">One Ul</a>
+            <a href="#">Bespoke</a>
+            <a href="#">SmartThing</a>
+            <a href="#">ESG</a>
+            <a href="#">Sustainabillity</a>
+        </nav>
+    </form>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#search").click(function(){
+            if($(".bg").css("display") != "block") {
+                $(".bg").css("display","block");
+                $(".search-box").slideDown();
+                $(".search-box").css("display","flex");
+            } else {
+                $(".bg").css("display","none");
+                $(".search-box").slideUp();
+            }
+    });
+
+    
+    $(".bg").click(function(){
+        $(".search-box").slideUp();
+        $(".bg").css("display","none");
+    });
+
+
+});
+</script>

@@ -1,0 +1,71 @@
+header {
+    @include wp; position: sticky; top: 0; z-index: 3; background: #fff;
+    section {
+        @include df(flex,space-between,center);
+        > div.header-left {
+            @include df(flex,flex-start,center){gap:50px;};
+            figure {
+                width:24%;
+            }
+            nav {
+                ul {
+                    @include df(flex,center,center){gap:40px;};
+                    li {
+                        font-size:18px; position:relative;
+                        &::after{content:''; position:absolute; left:50%; border-bottom:1px solid #000; display:block; width:0; height:1px;  transition: .5s;}
+                        &:hover::after{left:0; width:100%;}
+                    }
+                }
+            }
+        }
+        > div.header-right {
+            @include df(flex,space-between,center){gap:30px;};
+            .h-stb {
+                overflow: hidden; height:24px;
+                .stb-box {
+                    transform: translateY(0%);
+                    a {
+                        display:block; @include fs(nth($font-face,4),18px,500); animation: mov-top 10s infinite ease-in-out ; 
+                    }
+                }
+            }
+
+            div.h-icon {
+                span{
+                    margin:0 10px; cursor:pointer;
+                    &:nth-of-type(1)::after{
+                        content: 'Search'; font-size:28px; font-family: 'Material Symbols Outlined';
+                    }
+                    &:nth-of-type(2)::after{
+                        content: 'Public'; font-size:28px; font-family: 'Material Symbols Outlined';
+                    }
+                }
+            }
+        }
+    }
+
+    section.search-box {
+        padding:100px 0; top:96px; left:0; width:100%; background:#fff; position: absolute; z-index:2; @include df(none,center,center){}; 
+        form {
+            width:100%; max-width:700px;
+            div {
+                position: relative;
+                input {
+                    width:100%; outline: 0; padding:0 0 20px; border:0; border-bottom:2px solid #000; @include fs(nth($font-face,5),36px,500);
+
+                    &::placeholder {color:#aaa;}
+                }
+                label::after{
+                    content: 'Search'; position: absolute; top:-10px; right:0; font-size:60px; font-family: 'Material Symbols Outlined';
+                }
+            }
+            nav {
+                margin-top:15px;
+                @include df(flex,space-between,center){};
+                a {
+                    @include fs(nth($font-face,6),14px,500);
+                }
+            }
+        }
+    }
+}

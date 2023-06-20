@@ -1,0 +1,36 @@
+@import url('./reset.css');
+
+header {padding: 30px 50px; position: sticky; top: 0; z-index: 3; background: #fff;}
+header section {display:flex; justify-content: space-between;}
+header section > div {display: flex; align-items: center; gap:30px}
+header section > div nav ul {display: flex; gap:40px}
+header section > div nav ul li {font-size:18px; position:relative}
+header section > div nav ul li::after {content:''; position:absolute; left:50%; border-bottom:1px solid #000; display:block; width:0; height:1px;  transition: .5s}
+header section > div nav ul li:hover::after {left:0; width:100%;}
+header section > div.header-left figure {width:9vw}
+
+header section > div.header-right .h-stb {overflow: hidden; height:24px;}
+header section > div.header-right .h-stb .stb-box {transform: translateY(0%);  }
+header section > div.header-right .h-stb .stb-box a {display:block;font-size:18px; animation: mov-top 10s infinite ease-in-out ; font-family: 'SamsungSharpSans-Bold'; }
+
+@keyframes mov-top {
+    0% {transform: translateY(0)}
+    5% {transform: translateY(-100%)}
+    20% {transform: translateY(-100%)}
+    25% {transform: translateY(-200%)}
+    40% {transform: translateY(-200%)}
+    45% {transform: translateY(-300%)}
+    60% {transform: translateY(-300%)}
+    65% {transform: translateY(-400%)}
+    80% {transform: translateY(-400%)}
+    85% {transform: translateY(-500%)}
+    100% {transform: translateY(-500%)}
+}
+header section > div.header-right div.h-icon span {margin:0 10px; cursor:pointer}
+header section > div.header-right div.h-icon span:nth-of-type(1)::after{content: 'Search'; font-size:28px; font-family: 'Material Symbols Outlined';}
+header section > div.header-right div.h-icon span:nth-of-type(2)::after{content: 'Public'; font-size:28px; font-family: 'Material Symbols Outlined';}
+
+header section.search-box {padding:100px 0; width: 100%; top:96px; left:0; width:100%; background:#fff; position: absolute; z-index:2; display:none; justify-content: center; align-items: center;}
+header section.search-box input {outline: 0; padding:0 0 10px; border:0; border-bottom:2px solid #000; font-family: 'SamsungSharpSans-Medium'; font-size:36px}
+header section.search-box input::placeholder {color:#aaa;}
+section.bg {display:none; z-index:2; width:100%; height:100vh; position: fixed; top:0; background:rgba(0,0,0,0.3)}
