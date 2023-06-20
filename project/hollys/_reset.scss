@@ -1,0 +1,29 @@
+
+p {white-space: pre-line;}
+a {text-decoration: none; color:#000;}
+*{box-sizing: border-box}
+
+body,html {margin:0; padding:0; font-family: 'Inter', sans-serif;}
+
+header{
+    @include reset;
+    @include flex(space-between);
+    max-width:$m-wid;
+    width:100%;
+    margin:20px auto;
+    nav{
+        @include reset {list-style:none;};
+        @include flex(space-evenly);
+        width:100%;
+        a{
+            @include font(400,20px);
+            
+            &:hover{
+                @include font(700,20px);
+            }
+        }
+    }
+    figure{
+        @include reset;
+    }
+}

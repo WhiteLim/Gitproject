@@ -1,0 +1,80 @@
+
+@include device (nth($mobile,2)) {
+    header{
+        max-width:100%;
+        width: 100%;
+        justify-content: center;
+
+        nav a{
+            @include font(700,1rem);
+        }
+    }
+
+    main {
+        max-width:100%;
+        article.srot1 {
+            h1 {@include font(700,40px);}
+            figure {
+                img {
+                    height: 350px;
+                }
+            }
+        }
+        article.srot2 {
+            max-width:100%;
+            width: 100%;
+            margin:30px 0;
+            ul {
+                flex-wrap: wrap;
+                li{
+                    figure{
+                        figcaption{
+                            margin: 10px auto 40px;
+                        }
+                    }
+                }
+            }
+        }
+        section.srot3 {
+            > figure:nth-of-type(1) {
+                position: relative;
+                figcaption{
+                    display: flex;
+                    position: absolute;
+                    text-align: right;
+                    top:0; bottom:0; margin-top:auto; margin-bottom:auto;
+                    right:5%;
+                    font-size: 18px;
+                    align-content: flex-end;
+                    justify-content: center;
+                    flex-direction: column;
+                    h1 {
+                        span {color:red}
+                    }
+                    p {
+                        font-size:12px;
+                    }
+                }
+            }
+            > div {
+                max-width:100%;
+                position:relative;
+                > div {
+                    width: 90%;
+                    position:relative;
+                    margin:0px auto;
+                    right:0;
+                    text-align: center;
+                    h1, >p {display:none;}
+                    ul {
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        align-content: center
+                    }
+                }
+            }
+        }
+    }
+
+
+}
