@@ -165,16 +165,33 @@ header section > div.header-right .h-stb .stb-box a {
 header section > div.header-right div.h-icon span {
   margin: 0 10px;
   cursor: pointer;
+  position: relative;
 }
 header section > div.header-right div.h-icon span:nth-of-type(1)::after {
   content: "Search";
   font-size: 28px;
   font-family: "Material Symbols Outlined";
 }
-header section > div.header-right div.h-icon span:nth-of-type(2)::after {
+header section > div.header-right div.h-icon span:nth-of-type(2)::before {
   content: "Public";
   font-size: 28px;
   font-family: "Material Symbols Outlined";
+  position: relative;
+}
+header section > div.header-right div.h-icon span > div {
+  display: none;
+  text-align: right;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+header section > div.header-right div.h-icon span > div p {
+  font-family: "SamsungSharpSans-Medium";
+  font-size: 16px;
+  font-weight: 500;
+}
+header section > div.header-right div.h-icon span:nth-of-type(2):hover > div {
+  display: block;
 }
 header section.search-box {
   padding: 100px 0;
