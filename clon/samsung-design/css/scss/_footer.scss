@@ -1,0 +1,42 @@
+footer {
+    padding:30px 0;
+    section {
+        display:flex;
+        padding:0 5%;
+        gap :20px;
+        figure {
+            width:7%; overflow: hidden;
+            img{
+                
+            }
+        }
+
+        div {
+            display: flex;
+            gap:20px;
+            span {
+                @include fs(nth($font-face,5),13px,700);
+                display:flex;
+                align-items: center;
+                &::after {
+                    content: '';
+                    width: 1px; height:80%;
+                    display:block;
+                    border-right:1px solid #000;
+                    margin-left:20px;
+                }
+            }
+            a {
+                @include fs(nth($font-face,5),13px,600);
+                display:flex;
+                &:nth-of-type(1)::after {
+                    content: '';
+                    width: 1px; height:80%;
+                    display:block;
+                    border-right:1px solid #000;
+                    margin-left:20px;
+                }
+            }
+        }
+    }
+}

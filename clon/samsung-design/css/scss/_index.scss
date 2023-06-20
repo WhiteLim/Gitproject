@@ -88,7 +88,7 @@ main {
     } 
     
     
-    article:nth-of-type(3){
+    article:nth-of-type(3),article:nth-of-type(4){
         width:$w-width;
         margin:100px auto;
         h1 {
@@ -146,13 +146,69 @@ main {
         > div {
             width:$w-width;
             margin:0px auto;
-            p {
+            > p {
                 @include fs(nth($font-face,6),36px,100);
                 &:after {
                     content: '';
                     display: block; width:100%;
                     border-top:1px solid #000;
                     margin-top:20px;
+                }
+            }
+
+            ul {
+                > li {
+                    padding-bottom:50px;
+                    border-bottom:1px solid #000;
+                    > p {
+                        @include fs(nth($font-face,4),42px,700);
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        &::after{
+                            content: 'arrow_forward_ios';
+                            vertical-align: middle;
+                            font-weight:100;
+                            font-size:40px; font-family: 'Material Symbols Outlined';
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                    div.sd {
+                        span {
+                            @include fs(nth($font-face,1),18px,400);
+                            margin-bottom:30px;
+                            display: block;
+                        }
+                        ul {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            gap :5%;
+                            li {
+                                border:0;
+                                width:30%;
+                                figure {
+                                    a { 
+                                        display: block; height:100%; overflow:hidden;
+                                        img {
+                                            width:100%; object-fit: cover;
+                                            transition: 1s;
+                                        }
+
+                                        &:hover img {
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                    figcaption {
+                                        p.m-title {margin:30px 0 0}
+                                        p.m-contents{margin:10px 0; display: block;}
+                                        span.date{font-size:11px;}
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 

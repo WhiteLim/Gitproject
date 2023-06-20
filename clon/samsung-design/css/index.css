@@ -231,6 +231,52 @@ header section.search-box form nav a {
   font-weight: 500;
 }
 
+footer {
+  padding: 30px 0;
+}
+footer section {
+  display: flex;
+  padding: 0 5%;
+  gap: 20px;
+}
+footer section figure {
+  width: 7%;
+  overflow: hidden;
+}
+footer section div {
+  display: flex;
+  gap: 20px;
+}
+footer section div span {
+  font-family: "SamsungSharpSans-Medium";
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+footer section div span::after {
+  content: "";
+  width: 1px;
+  height: 80%;
+  display: block;
+  border-right: 1px solid #000;
+  margin-left: 20px;
+}
+footer section div a {
+  font-family: "SamsungSharpSans-Medium";
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+}
+footer section div a:nth-of-type(1)::after {
+  content: "";
+  width: 1px;
+  height: 80%;
+  display: block;
+  border-right: 1px solid #000;
+  margin-left: 20px;
+}
+
 main article:nth-of-type(1) {
   width: 1476px;
   margin: 100px auto;
@@ -343,11 +389,11 @@ main > figure video {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main article:nth-of-type(3) {
+main article:nth-of-type(3), main article:nth-of-type(4) {
   width: 1476px;
   margin: 100px auto;
 }
-main article:nth-of-type(3) h1 {
+main article:nth-of-type(3) h1, main article:nth-of-type(4) h1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -358,13 +404,13 @@ main article:nth-of-type(3) h1 {
   font-weight: 100;
   margin-bottom: 40px;
 }
-main article:nth-of-type(3) h1:after {
+main article:nth-of-type(3) h1:after, main article:nth-of-type(4) h1:after {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px solid #000;
 }
-main article:nth-of-type(3) ul {
+main article:nth-of-type(3) ul, main article:nth-of-type(4) ul {
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
@@ -372,36 +418,36 @@ main article:nth-of-type(3) ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
-main article:nth-of-type(3) ul li {
+main article:nth-of-type(3) ul li, main article:nth-of-type(4) ul li {
   width: 30%;
   margin-bottom: 30px;
 }
-main article:nth-of-type(3) ul li figure > p {
+main article:nth-of-type(3) ul li figure > p, main article:nth-of-type(4) ul li figure > p {
   width: 100%;
   height: 250px;
   overflow: hidden;
 }
-main article:nth-of-type(3) ul li figure > p img {
+main article:nth-of-type(3) ul li figure > p img, main article:nth-of-type(4) ul li figure > p img {
   width: 100%;
   transition: 0.5s;
 }
-main article:nth-of-type(3) ul li figure figcaption p:nth-of-type(1) {
+main article:nth-of-type(3) ul li figure figcaption p:nth-of-type(1), main article:nth-of-type(4) ul li figure figcaption p:nth-of-type(1) {
   margin: 20px 0;
 }
-main article:nth-of-type(3) ul li figure figcaption p:nth-of-type(2) {
+main article:nth-of-type(3) ul li figure figcaption p:nth-of-type(2), main article:nth-of-type(4) ul li figure figcaption p:nth-of-type(2) {
   margin: 10px 0;
 }
-main article:nth-of-type(3) ul li:hover img {
+main article:nth-of-type(3) ul li:hover img, main article:nth-of-type(4) ul li:hover img {
   transform: scale(1.2);
 }
-main article:nth-of-type(3) > a {
+main article:nth-of-type(3) > a, main article:nth-of-type(4) > a {
   text-align: center;
   display: block;
   font-family: "SamsungSharpSans-Regular";
   font-size: 18px;
   font-weight: 100;
 }
-main article:nth-of-type(3) > a::before {
+main article:nth-of-type(3) > a::before, main article:nth-of-type(4) > a::before {
   content: "";
   display: block;
   width: 1px;
@@ -418,17 +464,78 @@ main section.sort > div {
   width: 1476px;
   margin: 0px auto;
 }
-main section.sort > div p {
+main section.sort > div > p {
   font-family: "SamsungSharpSans-Regular";
   font-size: 36px;
   font-weight: 100;
 }
-main section.sort > div p:after {
+main section.sort > div > p:after {
   content: "";
   display: block;
   width: 100%;
   border-top: 1px solid #000;
   margin-top: 20px;
+}
+main section.sort > div ul > li {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #000;
+}
+main section.sort > div ul > li > p {
+  font-family: "SamsungSharpSans-Bold";
+  font-size: 42px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+main section.sort > div ul > li > p::after {
+  content: "arrow_forward_ios";
+  vertical-align: middle;
+  font-weight: 100;
+  font-size: 40px;
+  font-family: "Material Symbols Outlined";
+  transform: rotate(90deg);
+}
+main section.sort > div ul > li div.sd span {
+  font-family: "SamsungOneKorean-400";
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  display: block;
+}
+main section.sort > div ul > li div.sd ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 5%;
+}
+main section.sort > div ul > li div.sd ul li {
+  border: 0;
+  width: 30%;
+}
+main section.sort > div ul > li div.sd ul li figure a {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+main section.sort > div ul > li div.sd ul li figure a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1s;
+}
+main section.sort > div ul > li div.sd ul li figure a:hover img {
+  transform: scale(1.1);
+}
+main section.sort > div ul > li div.sd ul li figure figcaption p.m-title {
+  margin: 30px 0 0;
+}
+main section.sort > div ul > li div.sd ul li figure figcaption p.m-contents {
+  margin: 10px 0;
+  display: block;
+}
+main section.sort > div ul > li div.sd ul li figure figcaption span.date {
+  font-size: 11px;
 }
 
 @keyframes mov-top {
