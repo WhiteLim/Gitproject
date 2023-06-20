@@ -97,6 +97,21 @@ section.bg {
   font-weight: 500;
 }
 
+.underline {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0% !important;
+  border-bottom: 1px solid #000;
+  display: block;
+  width: 100% !important;
+  height: 1px;
+}
+
 article.sub-page {
   width: 1476px;
   margin: 100px auto;
@@ -205,11 +220,11 @@ header section > div.header-left nav ul li::after {
   display: block;
   width: 0;
   height: 1px;
-  transition: 0.5s;
 }
 header section > div.header-left nav ul li:hover::after {
   left: 0;
   width: 100%;
+  transition: 0.5s;
 }
 header section > div.header-right {
   display: flex;

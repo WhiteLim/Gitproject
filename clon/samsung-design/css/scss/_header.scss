@@ -14,8 +14,8 @@ header {
                     li {
                         cursor: pointer;
                         font-size:18px; position:relative;
-                        &::after{content:''; position:absolute; left:50%; border-bottom:1px solid #000; display:block; width:0; height:1px;  transition: .5s;}
-                        &:hover::after{left:0; width:100%;}
+                        &::after{content:''; position:absolute; left:50%; border-bottom:1px solid #000; display:block; width:0; height:1px;}
+                        &:hover::after{left:0; width:100%;  transition: .5s;}
                     }
                 }
             }
