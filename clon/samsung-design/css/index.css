@@ -189,6 +189,7 @@ header section > div.header-right div.h-icon span > div p {
   font-family: "SamsungSharpSans-Medium";
   font-size: 16px;
   font-weight: 500;
+  border-bottom: 2px solid #000;
 }
 header section > div.header-right div.h-icon span:nth-of-type(2):hover > div {
   display: block;

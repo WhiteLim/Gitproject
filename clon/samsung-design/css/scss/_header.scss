@@ -48,7 +48,7 @@ header {
                         top:10px; right:5px;
                         p {
                             @include fs(nth($font-face,5),16px,500); 
-
+                            border-bottom:2px solid #000;
                         }
                     }
                     
