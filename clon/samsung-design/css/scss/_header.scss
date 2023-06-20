@@ -6,11 +6,13 @@ header {
             @include df(flex,flex-start,center){gap:50px;};
             figure {
                 width:24%;
+                cursor: pointer;
             }
             nav {
                 ul {
                     @include df(flex,center,center){gap:40px;};
                     li {
+                        cursor: pointer;
                         font-size:18px; position:relative;
                         &::after{content:''; position:absolute; left:50%; border-bottom:1px solid #000; display:block; width:0; height:1px;  transition: .5s;}
                         &:hover::after{left:0; width:100%;}

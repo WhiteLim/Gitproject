@@ -1,12 +1,12 @@
 <section>
     <div class="header-left">
-        <figure><a href="#"><img src="./tools/main/header-logo-samsung-design-svg.svg" alt="logo"></a></figure>
+        <figure id="mains"><img src="./tools/main/header-logo-samsung-design-svg.svg" alt="logo"></figure>
         <nav>
             <ul>
-                <li><a href="#">Our Stories</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">News</a></li>
+                <li id="os">Our Stories</li>
+                <li id="au">About us</li>
+                <li id="cr">Career</li>
+                <li id="nw">News    </li>
             </ul>
         </nav>
     </div>
@@ -36,8 +36,8 @@
 <section class="search-box">
     <form>
         <div>
-            <input type="text" name="search" id="search" placeholder="Input Keyword">
-            <label for="search"></label>
+            <input type="text" name="searchd" id="searchd" placeholder="Input Keyword">
+            <label for="searchd"></label>
         </div>
         <nav>
             <a href="#">Galaxy 23</a>
@@ -68,6 +68,20 @@
     $(".bg").click(function(){
         $(".search-box").slideUp();
         $(".bg").css("display","none");
+    });
+
+    $("#mains").click(function(){
+        $("#main").load("./sub-content/main.html");
+        var renewURL = window.location.pathname;
+        history.pushState(null, null, renewURL);
+    });
+    
+    $("header nav li").click(function(){
+        var id = $(this).attr('id'); 
+        $("#main").load("./sub-content/sub_page.html");
+        var renewURL = window.location.pathname;
+        renewURL += '?c-id='+id;
+        history.pushState(null, null, renewURL);
     });
 
 
