@@ -67,6 +67,10 @@ a {
 }
 
 /* Common Setting */
+#popsd {
+  display: none;
+}
+
 section.bg {
   display: none;
   z-index: 2;
@@ -144,6 +148,7 @@ article.sub-page ul {
 article.sub-page ul li.sub {
   width: 30%;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 article.sub-page ul li.sub figure > p {
   width: 100%;
@@ -152,7 +157,7 @@ article.sub-page ul li.sub figure > p {
 }
 article.sub-page ul li.sub figure > p img {
   width: 100%;
-  transition: 0.5s;
+  transition: 1s;
 }
 article.sub-page ul li.sub figure figcaption p:nth-of-type(1) {
   margin: 20px 0;
@@ -161,7 +166,7 @@ article.sub-page ul li.sub figure figcaption p:nth-of-type(2) {
   margin: 10px 0;
 }
 article.sub-page ul li.sub:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 article.sub-page .mor {
   cursor: pointer;
@@ -668,6 +673,84 @@ main section.sort > div ul > li div.sd ul li figure figcaption p.m-contents {
 }
 main section.sort > div ul > li div.sd ul li figure figcaption span.date {
   font-size: 11px;
+}
+
+section.pop_box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+section.pop_box div {
+  width: 1200px;
+  height: 80%;
+  margin: 0px auto;
+  background: #fff;
+  overflow-y: auto;
+}
+section.pop_box div section {
+  text-align: left;
+  padding: 50px 0 0;
+}
+section.pop_box div section p {
+  width: 30%;
+  margin: 0px auto;
+}
+section.pop_box div section p.pop_date {
+  font-family: "SamsungOneKorean-400";
+  font-size: 16px;
+  font-weight: 100;
+}
+section.pop_box div section p.pop_date::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 10px auto 30px;
+  border-bottom: 1px solid #000;
+}
+section.pop_box div section p.pop_title {
+  white-space: pre-line;
+  font-family: "SamsungSharpSans-Bold";
+  font-size: 64px;
+  font-weight: 700;
+}
+section.pop_box div section p.pop_subtitle {
+  line-height: 2;
+  font-family: "SamsungOneKorean-400";
+  font-size: 21px;
+  font-weight: 100;
+}
+section.pop_box div section figure img {
+  transform: scale(0.4);
+}
+section.pop_box div section p.pop_content {
+  width: 28%;
+  line-height: 1.3;
+  font-family: "SamsungOneKorean-400";
+  font-size: 24px;
+  font-weight: 100;
+}
+section.pop_box span {
+  width: 1200px;
+  position: relative;
+  cursor: pointer;
+}
+section.pop_box span::after {
+  content: "Close";
+  font-weight: 700;
+  color: #000;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  font-size: 60px;
+  font-family: "Material Symbols Outlined";
 }
 
 @keyframes mov-top {

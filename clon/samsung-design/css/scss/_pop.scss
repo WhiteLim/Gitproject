@@ -1,0 +1,55 @@
+section.pop_box {
+    position:fixed;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 99;
+    @include df(flex,center,center){gap:10px; flex-direction: column};
+    div {
+        width:1200px; height:80%;
+        margin:0px auto;
+        background: #fff;
+        overflow-y: auto;
+        section{
+            text-align: left;
+            padding:50px 0 0;
+            p{width:30%; margin:0px auto;}
+            p.pop_date {
+                @include fs(nth($font-face,1),16px,100);
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;height:1px;
+                    margin:10px auto 30px;
+                    border-bottom:1px solid #000;
+                    
+                }
+            }
+            p.pop_title{
+                white-space: pre-line;
+                @include fs(nth($font-face,4),64px,700);
+            }
+            p.pop_subtitle{
+                line-height: 2;
+                @include fs(nth($font-face,1),21px,100);
+            }
+            figure{
+                img {transform: scale(0.4);}
+            }
+            p.pop_content{
+                width: 28%;
+                line-height: 1.3;
+                @include fs(nth($font-face,1),24px,100);
+            }
+        }
+    }
+    span {
+        width:1200px;
+        position: relative;
+        cursor: pointer;
+        &::after{
+            content: 'Close'; font-weight:700; color:#000; position: absolute; top:-50px; right:0; font-size:60px; font-family: 'Material Symbols Outlined';
+        }
+
+    }
+    
+}

@@ -1,7 +1,5 @@
 set_list();
 mores();
-
-
 function set_list() {
     let prs = document.location.href.split("?");
     let result1 = prs[1].slice(-2, 8);
@@ -30,7 +28,7 @@ function set_list() {
                 if (code == result1) {
                     if (cnt < 9) {
                         html += /* html */ `
-                            <li class="sub"><a href="#">
+                            <li class="sub" onclick="javascript:pops();">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
@@ -38,12 +36,11 @@ function set_list() {
                                             <p class="m-contents">${sub_title}</p>
                                             <sapn class="date">${date}</sapn>
                                     </figure>
-                                </a>
                             </li>
                         `;
                     } else {
                         html += /* html */ `
-                            <li class="sub" style="display:none;"><a href="#">
+                            <li onclick="javascript:pops();" class="sub" style="display:none;">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
@@ -51,7 +48,6 @@ function set_list() {
                                             <p class="m-contents">${sub_title}</p>
                                             <sapn class="date">${date}</sapn>
                                     </figure>
-                                </a>
                             </li>
                         `;
                         $(".mor").css("display","block");
@@ -76,4 +72,11 @@ function mores() {
         }
     });
 }
+
+function pops() {
+    $("#popsd").css("display","block")
+    $("#popsd").load("./sub-content/pop.html");
+    $("body").css("overflow-y","hidden")
+}
+
 

@@ -6,4 +6,7 @@ $(document).ready(function(){
     let renewURL = window.location.pathname;
     history.pushState(null, null, renewURL);
     $("#footer").load("./footer.html");
+
+
+    
 });
