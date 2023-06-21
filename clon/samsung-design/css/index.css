@@ -694,6 +694,14 @@ section.pop_box div {
   background: #fff;
   overflow-y: auto;
 }
+section.pop_box div::-webkit-scrollbar {
+  width: 10px;
+  background-color: #eee;
+}
+section.pop_box div::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 30px;
+}
 section.pop_box div section {
   text-align: left;
   padding: 50px 0 0;
