@@ -58,17 +58,23 @@ function set_list() {
 
                     }
                 cnt ++;
-                console.log (cnt)
                 }
             });
             $('.sub-page ul').append(html);
         });
 }
 
+let cont = 9
 $(".mor").click(function(){
-    $('.sub-page ul li').css("display","block");
-    $(".mor").css("display","none");
+    cont += 3
+    if (cont <= $(".sub-page ul li").length) {
+        $(`.sub-page ul li:lt(${cont})`).css("display","block");
+        if (cont == $(".sub-page ul li").length){
+            $(".mor").css("display","none")
+        }
+    }
 })
+
 // fetch("./js/data/data.json")
 //     .then((data) => data.json())
 //     .then((obj) => {
