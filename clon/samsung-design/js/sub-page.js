@@ -1,5 +1,5 @@
 set_list();
-
+mores();
 
 
 function set_list() {
@@ -64,37 +64,16 @@ function set_list() {
         });
 }
 
-let cont = 9
-$(".mor").click(function(){
-    cont += 3
-    if (cont <= $(".sub-page ul li").length) {
-        $(`.sub-page ul li:lt(${cont})`).css("display","block");
-        if (cont == $(".sub-page ul li").length){
-            $(".mor").css("display","none")
+function mores() {
+    let cont = 9;
+    $(".mor").click(function () {
+        cont += 3;
+        if (cont <= $(".sub-page ul li").length) {
+            $(`.sub-page ul li:lt(${cont})`).css("display", "block");
+            if (cont == $(".sub-page ul li").length) {
+                $(".mor").css("display", "none");
+            }
         }
-    }
-})
-
-// fetch("./js/data/data.json")
-//     .then((data) => data.json())
-//     .then((obj) => {
-//         data = obj.contents;
-//         let html = '';
-//         data.map(element => {
-//             if (element.code == result1) {
-//                 html +='<li class="sub"><a href="#">'
-//                 html +='<figure><p><img src="./tools/os/' + element.img_code + '" alt="' + element.img_code + '"></p>'
-//                 html +='<figcaption>'
-//                 html +='<p class="m-title">' + element.title + '</p>'
-//                 html +='<p class="m-contents">' + element.sub_title + '</p>'
-//                 html +='<sapn class="date">' + element.date + '</sapn>'
-//                 html +='</figure> </a> </li>'
-//             }
-//         });
-//         $('.sub-page ul').html(html)
-//     });
-    
-    
-    
-
+    });
+}
 
