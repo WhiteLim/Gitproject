@@ -41,7 +41,50 @@
             "title" : "Bringing Joy to Everyday Experiences",
             "sub_title" : "One UI 5가 만드는 즐거운 일상",
             "date" : "Mar 09, 2023"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_over-the-horizon5.jpg",
+            "title" : "Over the Horizon",
+            "sub_title" : "삼성 갤럭시 사운드 브랜딩 스토리",
+            "date" : "Mar 02, 2023"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_galaxy-s23.jpg",
+            "title" : "Create the Essentials",
+            "sub_title" : "삼성 갤럭시 S23 시리즈 디자인스토리",
+            "date" : "Feb 16, 2023"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_day-in-the-life.jpg",
+            "title" : "Day in the Life",
+            "sub_title" : "삼성과 함께하는 일상",
+            "date" : "Feb 07, 2023"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_in-the-future.jpg",
+            "title" : "In the Future",
+            "sub_title" : "삼성과 함께하는 미래",
+            "date" : "Feb 02, 2023"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_ux-writing1.jpg",
+            "title" : "Designing Words",
+            "sub_title" : "삼성 UX Writing 가이드",
+            "date" : "Nov 29, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_the-wave-epilogue.jpg",
+            "title" : "The Wave: Epilogue",
+            "sub_title" : "순환의 물결 속으로",
+            "date" : "Nov 22, 2022"
         }
+
 
 
     ]
