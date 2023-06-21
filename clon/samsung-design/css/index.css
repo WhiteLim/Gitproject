@@ -163,14 +163,15 @@ article.sub-page ul li.sub figure figcaption p:nth-of-type(2) {
 article.sub-page ul li.sub:hover img {
   transform: scale(1.2);
 }
-article.sub-page > a {
+article.sub-page .mor {
+  cursor: pointer;
   text-align: center;
-  display: block;
+  display: none;
   font-family: "SamsungSharpSans-Regular";
   font-size: 18px;
   font-weight: 100;
 }
-article.sub-page > a::before {
+article.sub-page .mor::before {
   content: "";
   display: block;
   width: 1px;

@@ -25,25 +25,50 @@ function set_list() {
         .then((data) => data.json())
         .then(({ contents }) => {
             let html = '';
+            let cnt = 0;
             contents.forEach(({ code, img_code, title, sub_title, date }) => {
                 if (code == result1) {
-                    html += /* html */ `
-                    <li class="sub"><a href="#">
-                            <figure>
-                                <p><img src="./tools/os/${img_code}" alt="${img_code}"></p>
-                                <figcaption>
-                                    <p class="m-title">${title}</p>
-                                    <p class="m-contents">${sub_title}</p>
-                                    <sapn class="date">${date}</sapn>
-                            </figure>
-                        </a>
-                    </li>
-                `;
+                    if (cnt < 9) {
+                        html += /* html */ `
+                            <li class="sub"><a href="#">
+                                    <figure>
+                                        <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
+                                        <figcaption>
+                                            <p class="m-title">${title}</p>
+                                            <p class="m-contents">${sub_title}</p>
+                                            <sapn class="date">${date}</sapn>
+                                    </figure>
+                                </a>
+                            </li>
+                        `;
+                    } else {
+                        html += /* html */ `
+                            <li class="sub" style="display:none;"><a href="#">
+                                    <figure>
+                                        <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
+                                        <figcaption>
+                                            <p class="m-title">${title}</p>
+                                            <p class="m-contents">${sub_title}</p>
+                                            <sapn class="date">${date}</sapn>
+                                    </figure>
+                                </a>
+                            </li>
+                        `;
+                        $(".mor").css("display","block");
+
+                    }
+                cnt ++;
+                console.log (cnt)
                 }
             });
             $('.sub-page ul').append(html);
         });
 }
+
+$(".mor").click(function(){
+    $('.sub-page ul li').css("display","block");
+    $(".mor").css("display","none");
+})
 // fetch("./js/data/data.json")
 //     .then((data) => data.json())
 //     .then((obj) => {

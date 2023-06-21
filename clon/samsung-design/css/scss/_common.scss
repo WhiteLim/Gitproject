@@ -66,9 +66,10 @@ article.sub-page{
         }
     }
 
-    >a {
+    .mor {
+        cursor: pointer;
         text-align: center;
-        display: block;
+        display: none;
         @include fs(nth($font-face,6),18px,100);
 
         &::before {

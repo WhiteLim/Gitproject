@@ -83,7 +83,113 @@
             "title" : "The Wave: Epilogue",
             "sub_title" : "순환의 물결 속으로",
             "date" : "Nov 22, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_the-wave.jpg",
+            "title" : "The Wave: 순환의 물결",
+            "sub_title" : "자연스럽게 흐르는 자원 순환",
+            "date" : "Nov 11, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_the-wave-prologue2.jpg",
+            "title" : "The Wave: Prologue",
+            "sub_title" : "순환의 물결, 이야기의 시작",
+            "date" : "Nov 08, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_watch-face.jpg",
+            "title" : "New faces for the Watch",
+            "sub_title" : "새로운 갤럭시 워치 페이스 이야기",
+            "date" : "Aug 23, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_galaxy-z-fold-flip-4.jpg",
+            "title" : "Going Beyond Innovation",
+            "sub_title" : "삼성 갤럭시 Z 플립4와 갤럭시 Z 폴드4 디자인스토리",
+            "date" : "Aug 11, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_space-tycoon2.jpg",
+            "title" : "Welcome to Samsung Space Tycoon",
+            "sub_title" : "삼성 X 로블록스의 가상 현실 경험",
+            "date" : "Jul 12, 2022"
+        },
+        {
+            "code" : "os",
+            "img_code" : "ctgbnr_india-keyboard1.jpg",
+            "title" : "Samsung India Keyboard",
+            "sub_title" : "29개 인도 지역 언어를 위한 새로운 키보드",
+            "date" : "Jun 16, 2022"
+        },
+        {
+            "code" : "au",
+            "img_code" : "ctgbnr_awards13.jpg",
+            "title" : "Design Award Winners",
+            "sub_title" : "디자인 어워드 수상작 소개",
+            "date" : "Dec 15, 2022"
+        },
+        {
+            "code" : "au",
+            "img_code" : "ctgbnr_design-thinking.jpg",
+            "title" : "Be Creative!",
+            "sub_title" : "삼성 디자인 씽킹",
+            "date" : "Jul 22, 2021"
+        },
+        {
+            "code" : "au",
+            "img_code" : "ctgbnr_samsung-design-history.jpg",
+            "title" : "The History of Samsung Design",
+            "sub_title" : "삼성전자 디자인의 발자취를 돌아보다",
+            "date" : "Jul 11, 2019"
+        },
+        {
+            "code" : "cr",
+            "img_code" : "ctgbnr_design-career-1.jpg",
+            "title" : "Work as a Samsung Designer",
+            "sub_title" : "우리가 하는 일, 우리가 지향하는 일",
+            "date" : "Jun 30, 2021"
+        },
+        {
+            "code" : "cr",
+            "img_code" : "ctgbnr_design_career_2.jpg",
+            "title" : "Inside Samsung Design",
+            "sub_title" : "우리의 업무공간, 우리의 문화",
+            "date" : "Jun 30, 2021"
+        },
+        {
+            "code" : "cr",
+            "img_code" : "ctgbnr_sdm.jpg",
+            "title" : "Samsung Design Membership",
+            "sub_title" : "삼성디자인멤버십을 소개합니다",
+            "date" : "Dec 15, 2022"
+        },
+        {
+            "code" : "nw",
+            "img_code" : "2023_AFW_Banner.png",
+            "title" : "2023 접근성 페스티벌 위크",
+            "sub_title" : "",
+            "date" : "Jun 15, 2023"
+        },
+        {
+            "code" : "nw",
+            "img_code" : "designsamsung_KV_Main.jpg",
+            "title" : "Re:Create 디자인 챌린지",
+            "sub_title" : "",
+            "date" : "Jun 01, 2023"
+        },
+        {
+            "code" : "nw",
+            "img_code" : "20230418img_banner.jpg",
+            "title" : "2023 iF 디자인어워드",
+            "sub_title" : "",
+            "date" : "Apr 18, 2023"
         }
+
 
 
 
