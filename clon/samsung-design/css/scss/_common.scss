@@ -11,6 +11,16 @@ $w-width : 1476px;
 /* Site Reset */
 * {box-sizing: border-box;}
 html, body {@include mp-reset; @include fs(nth($font-face,6),16px,100); }
+body{
+    &::-webkit-scrollbar {
+        width: 7px;
+        background-color: #eee;
+     }
+     &::-webkit-scrollbar-thumb {
+        background-color: #000;
+        border-radius: 30px;
+     }
+}
 object { @include mp-reset; width:100%; height:100%;}
 img {width:100%; object-fit: cover; vertical-align: middle;}
 ul {list-style: none; @include mp-reset;}

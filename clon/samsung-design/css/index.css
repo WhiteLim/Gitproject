@@ -36,6 +36,15 @@ html, body {
   font-weight: 100;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #eee;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 30px;
+}
+
 object {
   margin: 0;
   padding: 0;
