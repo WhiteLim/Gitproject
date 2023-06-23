@@ -1,29 +1,29 @@
 let count = 0.4, last_scrollTop = 0;
 $(".pop_box div").scroll(function () {
-    var tmp = $(this).scrollTop();
-    if (tmp > last_scrollTop)
-    {
+    let sc = count.toFixed(2)
+    let tmp = $(this).scrollTop();
+
+
+    if (tmp > last_scrollTop){
         
-        if (count >= 1) {
+        if (sc >= 1) {
             count = 1
         } else {
             count += 0.02; 
         }
         
-        $("#reload").css("transform","scale(" + count + ")");
+        $("#reload").css("transform","scale(" + sc + ")");
     
     } else {
-        if (count <= 0) {
+        if (sc <= 0.42) {
             count = 0.4
         } else {
             count -= 0.02; 
+            $("#reload").css("transform","scale(" + sc + ")");
         }
-        $("#reload").css("transform","scale(" + count + ")");
     }
-    
-    console.log(count)
 
-    if (count <= 0.5){
+    if (count <= 0.4){
         last_scrollTop = 0;
     } else {
         last_scrollTop = tmp;
