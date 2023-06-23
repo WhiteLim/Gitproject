@@ -35,6 +35,7 @@ section.bg {display:none; z-index:2; width:100%; height:100vh; position: fixed; 
 .m-title {@include fs(nth($font-face,4),30px,700);}
 .m-contents {@include fs(nth($font-face,3),16px,500); line-height: 1.7; margin:40px 0;}
 .date {@include fs(nth($font-face,3),12px,500);}
+.mr-50 {margin:90px auto !important;}
 .underline {
     cursor: pointer;
     font-size:18px; position:relative;
