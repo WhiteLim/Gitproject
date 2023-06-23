@@ -1,16 +1,21 @@
-let count = 6, last_scroll = 0;
+let count = 0.4, last_scrollTop = 0;
 $(".pop_box div").scroll(function () {
     var tmp = $(this).scrollTop();
-
-    if (tmp > last_scroll)
+    console.log (last_scrollTop,tmp)
+    if (tmp > last_scrollTop)
     {
-        ++ count;
-        $("#reload").css("transform","scale(0." + count + ")");
+        
+        if (count >= 1) {
+            count = 1
+        } else {
+            count += 0.01; 
+        }
+        
+        $("#reload").css("transform","scale(" + count + ")");
+    
     } else {
-        -- count;
-        $("#reload").css("transform","scale(0." + count + ")");
+            count -= 0.01; 
+        $("#reload").css("transform","scale(" + count + ")");
     }
     last_scrollTop = tmp;
-    count = last_scrollTop;
-
 })

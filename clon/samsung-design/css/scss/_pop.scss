@@ -42,7 +42,7 @@ section.pop_box {
                 @include fs(nth($font-face,1),21px,100);
             }
             figure{
-                img {transform: scale(0.4);}
+                img {transform: scale(0.4); transition: .5;}
             }
             p.pop_content{
                 width: 28%;

@@ -750,6 +750,7 @@ section.pop_box div section p.pop_subtitle {
 }
 section.pop_box div section figure img {
   transform: scale(0.4);
+  transition: 0.5;
 }
 section.pop_box div section p.pop_content {
   width: 28%;
