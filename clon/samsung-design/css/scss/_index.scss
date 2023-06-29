@@ -12,7 +12,6 @@ main {
             @include df(flex,center,flex-end){gap:10px; flex-direction: column};
             > p{
                 width: 100%;
-                height: 830px;
                 overflow: hidden;
                 video {
                     width:100%; object-fit: cover;
@@ -46,9 +45,9 @@ main {
         div {
             @include df(flex,space-between,flex-start){gap:50px};
             div {
-                width:50%;
 
                 &.main-left {
+                    width:50%;
                     position: sticky; top:0;
                     figure{
                         width:100%;
@@ -61,6 +60,7 @@ main {
                 
 
                 &.main-right {
+                    width:calc(100% - (50% + 50px));
                     ul {
                         li {
                             border-bottom:1px solid #000;
@@ -120,7 +120,7 @@ main {
                 width: 30%;
                 margin-bottom:30px;
                 figure {
-                    > p {width:100%; height:250px; overflow: hidden;
+                    > p {width:100%; overflow: hidden;
                         img {width:100%; transition: .5s;}    
                     }
                     figcaption{
@@ -232,3 +232,4 @@ main {
         }
     }
 }
+

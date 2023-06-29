@@ -8,9 +8,22 @@
 </section>
 <nav>
     <ul>
-        <li><a href="#">Our Stories</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Career</a></li>
-        <li><a href="#">News</a></li>
+        <li id="os">Our Stories</li>
+        <li id="au">About us</li>
+        <li id="cr">Career</li>
+        <li id="nw">News</li>
     </ul>
 </nav>
+
+<script>
+        $("footer nav li").click(function(){
+        let id = $(this).attr('id'); 
+        let idx = $(this).index() +1;
+        $("header nav li").removeClass('underline')
+        $("header nav li:nth-of-type("+ idx +")").addClass('underline')
+        $("#main").load("./sub-content/sub_page.html");
+        let renewURL = window.location.pathname;
+        renewURL += '?c-id='+id;
+        history.pushState(null, null, renewURL);
+    });
+</script>

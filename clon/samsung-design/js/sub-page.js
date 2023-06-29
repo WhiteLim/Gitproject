@@ -40,7 +40,7 @@ function set_list() {
                         `;
                     } else {
                         html += /* html */ `
-                            <li onclick="javascript:pops();" class="sub" style="display:none;">
+                            <li class="sub" onclick="javascript:pops();" style="display:none;">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
