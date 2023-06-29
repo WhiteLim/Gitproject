@@ -11,3 +11,24 @@
     85% {transform: translateY(-500%)}
     100% {transform: translateY(-500%)}
 }
+
+@keyframes pop_images3 {
+    100% {
+        transform: translateY(5%); opacity: 1;
+    }    
+}
+
+@keyframes pop_images32 {
+    100% {
+        transform: translateY(-5%); opacity: 1;
+    }    
+}
+@keyframes pop_images33 {
+    100% {
+        transform: translateX(-5%); opacity: 1;
+    }    
+}
+
+@keyframes scales {
+    100%{ transform: scale(1);}
+}

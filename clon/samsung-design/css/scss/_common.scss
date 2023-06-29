@@ -1,9 +1,9 @@
 /* Font setting */
-
 $font-face : ('SamsungOneKorean-400','SamsungOneKorean-700','SamsungOneLatin-400','SamsungSharpSans-Bold','SamsungSharpSans-Medium','SamsungSharpSans-Regular');
 @each $fs in $font-face {
     @font-face {font-family: '#{$fs}'; src: url('./font/#{$fs}.woff');}
 }
+
 
 $w-width : 1476px;
 

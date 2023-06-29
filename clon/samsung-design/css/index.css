@@ -398,6 +398,7 @@ footer section div a {
   font-size: 13px;
   font-weight: 600;
   display: flex;
+  cursor: pointer;
 }
 footer section div a:nth-of-type(1)::after {
   content: "";
@@ -440,10 +441,18 @@ main article.th figure {
   gap: 10px;
   flex-direction: column;
 }
-main article.th figure video {
+main article.th figure > p {
+  width: 100%;
+  height: 830px;
+  overflow: hidden;
+}
+main article.th figure > p video {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: scale(1.1);
+  transition: 0.5s;
+  animation: scales 0.5s ease-in-out forwards;
 }
 main article.th figure figcaption {
   padding-right: 2%;
@@ -590,14 +599,15 @@ main article:nth-of-type(3) ul li figure figcaption p:nth-of-type(2), main artic
 main article:nth-of-type(3) ul li:hover img, main article:nth-of-type(4) ul li:hover img {
   transform: scale(1.2);
 }
-main article:nth-of-type(3) > a, main article:nth-of-type(4) > a {
+main article:nth-of-type(3) > div, main article:nth-of-type(4) > div {
   text-align: center;
   display: block;
+  cursor: pointer;
   font-family: "SamsungSharpSans-Regular";
   font-size: 18px;
   font-weight: 100;
 }
-main article:nth-of-type(3) > a::before, main article:nth-of-type(4) > a::before {
+main article:nth-of-type(3) > div::before, main article:nth-of-type(4) > div::before {
   content: "";
   display: block;
   width: 1px;
@@ -629,6 +639,12 @@ main section.sort > div > p:after {
 main section.sort > div ul > li {
   padding-bottom: 50px;
   border-bottom: 1px solid #000;
+}
+main section.sort > div ul > li > .sd {
+  display: none;
+}
+main section.sort > div ul > li:nth-of-type(1) .sd {
+  display: block;
 }
 main section.sort > div ul > li > p {
   font-family: "SamsungSharpSans-Bold";
@@ -701,7 +717,7 @@ section.pop_box {
   flex-direction: column;
 }
 section.pop_box div {
-  width: 1400px;
+  width: 80%;
   height: 80%;
   margin: 0px auto;
   background: #fff;
@@ -748,7 +764,7 @@ section.pop_box div section p.pop_subtitle {
   font-size: 21px;
   font-weight: 100;
 }
-section.pop_box div section figure img {
+section.pop_box div section > figure.pop-images-1 img {
   transform: scale(0.4);
 }
 section.pop_box div section p.pop_content {
@@ -757,6 +773,29 @@ section.pop_box div section p.pop_content {
   font-family: "SamsungOneKorean-400";
   font-size: 24px;
   font-weight: 100;
+}
+section.pop_box div section figure.pop_images3 {
+  position: relative;
+  height: 850px;
+}
+section.pop_box div section figure.pop_images3 img {
+  position: absolute;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 0.5s;
+  opacity: 0;
+}
+section.pop_box div section figure.pop_images3 img:nth-of-type(1) {
+  animation: pop_images3 2s forwards ease-in-out;
+}
+section.pop_box div section figure.pop_images3 img:nth-of-type(2) {
+  animation: pop_images32 2s forwards ease-in-out;
+}
+section.pop_box div section figure.pop_images3 img:nth-of-type(3) {
+  left: 130px;
+  animation: pop_images33 2s forwards ease-in-out;
 }
 section.pop_box div section article h1 {
   text-align: center;
@@ -831,6 +870,79 @@ section.pop_box > span::after {
   font-family: "Material Symbols Outlined";
 }
 
+.email {
+  width: 80% !important;
+  padding: 5% 10% 0;
+  overflow: hidden;
+}
+.email article {
+  width: 100%;
+}
+.email article h1 {
+  font-family: "SamsungOneKorean-400";
+  font-size: 32px;
+  font-weight: 500;
+}
+.email article > p {
+  font-family: "SamsungOneKorean-400";
+  font-size: 16px;
+  font-weight: 500;
+}
+.email article .border-box {
+  width: 80%;
+  border: 1px solid #000;
+  padding: 10px 10%;
+  margin: 50px auto;
+}
+.email article .border-box p {
+  font-family: "SamsungOneKorean-400";
+  font-size: 16px;
+  font-weight: 500;
+}
+.email article .border-box p:nth-of-type(1) {
+  text-align: center;
+  font-family: "SamsungOneKorean-700";
+  font-size: 16px;
+  font-weight: 500;
+}
+.email article .footer {
+  margin: 40px auto;
+}
+.email article .footer figure {
+  display: flex;
+}
+.email article .footer figure span {
+  margin-left: 2%;
+  width: 100%;
+  display: block;
+}
+
+.pro {
+  width: 80% !important;
+  padding: 5% 10% 0;
+  overflow: hidden;
+  background: #f8f8f8 !important;
+}
+.pro article {
+  width: 100%;
+}
+.pro article h1 {
+  font-family: "SamsungOneKorean-400";
+  font-size: 37px;
+  font-weight: 500;
+}
+.pro article p {
+  font-family: "SamsungOneKorean-400";
+  font-size: 14px;
+  font-weight: 400;
+}
+.pro article p.p-title {
+  font-family: "SamsungOneKorean-400";
+  font-size: 24px;
+  font-weight: 400;
+  margin: 40px 0 10px;
+}
+
 @keyframes mov-top {
   0% {
     transform: translateY(0);
@@ -864,5 +976,28 @@ section.pop_box > span::after {
   }
   100% {
     transform: translateY(-500%);
+  }
+}
+@keyframes pop_images3 {
+  100% {
+    transform: translateY(5%);
+    opacity: 1;
+  }
+}
+@keyframes pop_images32 {
+  100% {
+    transform: translateY(-5%);
+    opacity: 1;
+  }
+}
+@keyframes pop_images33 {
+  100% {
+    transform: translateX(-5%);
+    opacity: 1;
+  }
+}
+@keyframes scales {
+  100% {
+    transform: scale(1);
   }
 }/*# sourceMappingURL=index.css.map */

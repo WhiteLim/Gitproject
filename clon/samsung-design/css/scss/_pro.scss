@@ -1,0 +1,20 @@
+.pro {
+    width: 80% !important;
+    padding:5% 10% 0;
+    overflow: hidden;
+    background: #f8f8f8 !important;
+
+    article{
+        width: 100%;
+        h1{@include fs(nth($font-face,1),37px,500);}
+        p {
+            @include fs(nth($font-face,1),14px,400);
+
+            &.p-title{
+                @include fs(nth($font-face,1),24px,400);
+                margin:40px 0 10px;
+            }
+        }
+    }
+    
+}

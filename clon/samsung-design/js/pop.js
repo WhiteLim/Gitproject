@@ -1,4 +1,5 @@
 let count = 0.4, last_scrollTop = 0;
+
 $(".pop_box div").scroll(function () {
     let sc = count.toFixed(2)
     let tmp = $(this).scrollTop();
