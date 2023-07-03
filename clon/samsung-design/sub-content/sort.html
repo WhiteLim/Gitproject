@@ -307,8 +307,8 @@
 </section>
 
 <script>
-    const li_opend = document.querySelectorAll(".sort > div > ul > li ")
-    li_opend.forEach(function(v,k){
+    const li_opendq = document.querySelectorAll(".sort > div > ul > li ")
+    li_opendq.forEach(function(v,k){
         v.onclick=function(){
             if($('.sd').eq(k).css("display") == "none"){
                 $('.sd').slideUp().eq(k).slideDown()
