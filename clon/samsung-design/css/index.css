@@ -201,7 +201,8 @@ article.search-page {
   width: 90%;
   max-height: 50vh;
   overflow-y: auto;
-  margin: 20px auto;
+  margin: 40px auto 0;
+  padding: 0 20px;
 }
 article.search-page::-webkit-scrollbar {
   width: 7px;
@@ -221,13 +222,32 @@ article.search-page h1 {
   font-size: 36px;
   font-weight: 100;
   margin-bottom: 40px;
+  display: inline;
 }
 article.search-page h1:after {
   content: "";
   display: block;
   width: 100%;
 }
+article.search-page h1 span {
+  font-family: "SamsungSharpSans-Bold";
+  font-size: 36px;
+  font-weight: 700;
+}
+article.search-page h1 span b {
+  vertical-align: top;
+  display: inline-block;
+  font-family: "SamsungSharpSans-Bold";
+  font-size: 18px;
+  font-weight: 700;
+}
+article.search-page h1 p {
+  font-family: "SamsungSharpSans-Regular";
+  font-size: 36px;
+  font-weight: 400;
+}
 article.search-page ul {
+  margin-top: 20px;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
@@ -436,6 +456,8 @@ header section.search-box > section nav a {
 }
 header section.search-box > div.search-end {
   display: none;
+  width: 100%;
+  padding: 0 20px;
 }
 
 footer {

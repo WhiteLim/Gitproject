@@ -100,7 +100,8 @@ article.sub-page{
 article.search-page{
     width:90%; max-height:50vh;
     overflow-y: auto;
-    margin:20px auto;
+    margin:40px auto 0;
+    padding:0 20px;
     
     &::-webkit-scrollbar {
         width: 7px;
@@ -115,13 +116,26 @@ article.search-page{
         @include df(flex,center,flex-start){gap:10px; flex-direction: column};
         @include fs(nth($font-face,6),36px,100);
         margin-bottom:40px;
+        display: inline;
         &:after {
             content: '';
             display: block; width:100%;
         }
+        span{
+            @include fs(nth($font-face,4),36px,700);
+            b{
+                vertical-align: top;
+                display: inline-block;
+                @include fs(nth($font-face,4),18px,700);
+            }
+        }
+        p{
+            @include fs(nth($font-face,6),36px,400);
+        }
     }
 
     ul {
+        margin-top:20px;
         margin-bottom:40px;
         @include df(flex,space-between,flex-start){ flex-direction: row; flex-wrap: wrap};
         li.sub {
