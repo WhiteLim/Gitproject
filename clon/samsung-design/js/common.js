@@ -11,6 +11,7 @@ $(document).ready(function(){
         addEventListener('load', function () {
             addEventListener('popstate', function () {
                 let prs = document.location.href.split("?");
+                console.log[prs]
                 if(prs[1] == undefined){
                     $("#main").load("./sub-content/main.html");
                     $("header nav li").removeClass('underline');
@@ -20,7 +21,7 @@ $(document).ready(function(){
                     li_lenght.forEach(function(v,k){
                         let name = v.id;
                         if(result1 == name){
-                            let id = name, idx=k;
+                            let idx=k;
                             $("header nav li").removeClass('underline').eq(idx).addClass('underline')
                             $("#main").load("./sub-content/sub_page.html");
                         }
