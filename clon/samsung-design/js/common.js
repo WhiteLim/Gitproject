@@ -7,11 +7,11 @@ $(document).ready(function(){
     history.pushState(null, null, renewURL);
     $("#footer").load("./footer.html");
 
-    if (window.history && history.pushState) {
+    if (window.history || history.pushState) {
         addEventListener('load', function () {
             addEventListener('popstate', function () {
                 let prs = document.location.href.split("?");
-                console.log[prs]
+                console.log(prs)
                 if(prs[1] == undefined){
                     $("#main").load("./sub-content/main.html");
                     $("header nav li").removeClass('underline');
