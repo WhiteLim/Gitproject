@@ -197,6 +197,83 @@ article.sub-page .mor::before {
   border-left: 1px solid #000;
 }
 
+article.search-page {
+  width: 90%;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin: 20px auto;
+}
+article.search-page::-webkit-scrollbar {
+  width: 7px;
+  background-color: #eee;
+}
+article.search-page::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 30px;
+}
+article.search-page h1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex-direction: column;
+  font-family: "SamsungSharpSans-Regular";
+  font-size: 36px;
+  font-weight: 100;
+  margin-bottom: 40px;
+}
+article.search-page h1:after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+article.search-page ul {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+article.search-page ul li.sub {
+  width: 30%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+article.search-page ul li.sub figure > p {
+  width: 100%;
+  overflow: hidden;
+}
+article.search-page ul li.sub figure > p img {
+  width: 100%;
+  transition: 1s;
+}
+article.search-page ul li.sub figure figcaption p:nth-of-type(1) {
+  margin: 20px 0;
+}
+article.search-page ul li.sub figure figcaption p:nth-of-type(2) {
+  margin: 10px 0;
+}
+article.search-page ul li.sub:hover img {
+  transform: scale(1.1);
+}
+article.search-page .mor {
+  cursor: pointer;
+  text-align: center;
+  display: none;
+  font-family: "SamsungSharpSans-Regular";
+  font-size: 18px;
+  font-weight: 100;
+}
+article.search-page .mor::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 30px;
+  margin: 0px auto 10px;
+  border-left: 1px solid #000;
+}
+
 header {
   padding: 30px 50px;
   position: sticky;
@@ -311,15 +388,17 @@ header section.search-box {
   display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-header section.search-box form {
+header section.search-box > section {
   width: 100%;
   max-width: 700px;
+  display: block;
 }
-header section.search-box form div {
+header section.search-box > section div {
   position: relative;
 }
-header section.search-box form div input {
+header section.search-box > section div input {
   width: 100%;
   outline: 0;
   padding: 0 0 20px;
@@ -329,13 +408,14 @@ header section.search-box form div input {
   font-size: 36px;
   font-weight: 500;
 }
-header section.search-box form div input::-moz-placeholder {
+header section.search-box > section div input::-moz-placeholder {
   color: #aaa;
 }
-header section.search-box form div input::placeholder {
+header section.search-box > section div input::placeholder {
   color: #aaa;
 }
-header section.search-box form div label::after {
+header section.search-box > section div label::after {
+  cursor: pointer;
   content: "Search";
   position: absolute;
   top: -10px;
@@ -343,16 +423,19 @@ header section.search-box form div label::after {
   font-size: 60px;
   font-family: "Material Symbols Outlined";
 }
-header section.search-box form nav {
+header section.search-box > section nav {
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header section.search-box form nav a {
+header section.search-box > section nav a {
   font-family: "SamsungSharpSans-Regular";
   font-size: 14px;
   font-weight: 500;
+}
+header section.search-box > div.search-end {
+  display: none;
 }
 
 footer {

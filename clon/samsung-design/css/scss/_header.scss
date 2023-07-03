@@ -65,9 +65,9 @@ header {
     }
 
     section.search-box {
-        padding:100px 0; top:96px; left:0; width:100%; background:#fff; position: absolute; z-index:2; @include df(none,center,center){}; 
-        form {
-            width:100%; max-width:700px;
+        padding:100px 0; top:96px; left:0; width:100%; background:#fff; position: absolute; z-index:2; @include df(none,center,center){flex-direction: column;}; 
+        > section {
+            width:100%; max-width:700px; display: block;
             div {
                 position: relative;
                 input {
@@ -76,7 +76,7 @@ header {
                     &::placeholder {color:#aaa;}
                 }
                 label::after{
-                    content: 'Search'; position: absolute; top:-10px; right:0; font-size:60px; font-family: 'Material Symbols Outlined';
+                    cursor: pointer; content: 'Search'; position: absolute; top:-10px; right:0; font-size:60px; font-family: 'Material Symbols Outlined';
                 }
             }
             nav {
@@ -86,6 +86,9 @@ header {
                     @include fs(nth($font-face,6),14px,500);
                 }
             }
+        }
+        > div.search-end {
+            display: none;
         }
     }
 }
