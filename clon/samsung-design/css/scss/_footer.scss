@@ -33,16 +33,18 @@ footer {
                     margin-left:20px;
                 }
             }
-            a {
-                @include fs(nth($font-face,5),13px,600);
-                display:flex;
-                cursor: pointer;
-                &:nth-of-type(1)::after {
-                    content: '';
-                    width: 1px; height:80%;
-                    display:block;
-                    border-right:1px solid #000;
-                    margin-left:20px;
+            div{
+                a {
+                    @include fs(nth($font-face,5),13px,600);
+                    display:flex;
+                    cursor: pointer;
+                    &:nth-of-type(1)::after {
+                        content: '';
+                        width: 1px; height:80%;
+                        display:block;
+                        border-right:1px solid #000;
+                        margin-left:20px;
+                    }
                 }
             }
         }

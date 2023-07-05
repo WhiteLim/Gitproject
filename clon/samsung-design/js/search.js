@@ -84,7 +84,7 @@ function key_contents(k){
                                     </figure>
                             </li>
                         `;
-                        $(".mor").css("display","block");
+                        $(".mor").css("display","block ");
     
                     }
                 cnt ++;
