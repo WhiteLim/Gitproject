@@ -34,6 +34,20 @@
 }
 
 @media (max-width:1213px){
+     section.pop_box{
+        div{
+            section{
+                figure.pop_images3 {
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
     footer{
         flex-wrap: wrap;
         justify-content: center;
@@ -80,6 +94,34 @@
                 li.sub{
                     width: 45%;
                 } 
+            }
+        }
+    }
+}
+
+@media (max-width:1088px){
+    section.pop_box{
+        div{
+            section{
+                p.pop_content {
+                    width: 100%;
+                }
+                figure.pop_images3 {
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+                }
+                article{
+                    figure{
+                        width: 100%;
+                        figcaption{
+                            flex-direction: column;
+                            p{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

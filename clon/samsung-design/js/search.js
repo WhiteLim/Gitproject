@@ -8,7 +8,7 @@ function all_contents(){
             contents.forEach(({ code, img_code, title, sub_title, date }) => {
                     if (cnt < 9) {
                         html += /* html */ `
-                            <li class="sub" onclick="javascript:pops();">
+                            <li class="sub" onclick="javascript:pops();" data-aos="fade-up" data-aos-duration="3000">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
@@ -20,7 +20,7 @@ function all_contents(){
                         `;
                     } else {
                         html += /* html */ `
-                            <li class="sub" onclick="javascript:pops();" style="display:none;">
+                            <li class="sub" onclick="javascript:pops();" style="display:none;" data-aos="fade-up" data-aos-duration="3000">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
@@ -62,7 +62,7 @@ function key_contents(k){
     
                     if (cnt < 9) {
                         html += /* html */ `
-                            <li class="sub" onclick="javascript:pops();">
+                            <li class="sub" onclick="javascript:pops();" data-aos="fade-up" data-aos-duration="3000">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
@@ -74,7 +74,7 @@ function key_contents(k){
                         `;
                     } else {
                         html += /* html */ `
-                            <li class="sub" onclick="javascript:pops();" style="display:none;">
+                            <li class="sub" onclick="javascript:pops();" style="display:none;" data-aos="fade-up" data-aos-duration="3000">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>

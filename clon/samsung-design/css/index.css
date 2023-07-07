@@ -1128,6 +1128,14 @@ main section.sort > div ul > li div.sd ul li figure figcaption span.date {
   }
 }
 @media (max-width: 1213px) {
+  section.pop_box div section figure.pop_images3 {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  section.pop_box div section figure.pop_images3 img {
+    width: 100%;
+  }
   footer {
     flex-wrap: wrap;
     justify-content: center;
@@ -1159,6 +1167,25 @@ main section.sort > div ul > li div.sd ul li figure figcaption span.date {
   }
   main article.sub-page ul li.sub {
     width: 45%;
+  }
+}
+@media (max-width: 1088px) {
+  section.pop_box div section p.pop_content {
+    width: 100%;
+  }
+  section.pop_box div section figure.pop_images3 {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  section.pop_box div section article figure {
+    width: 100%;
+  }
+  section.pop_box div section article figure figcaption {
+    flex-direction: column;
+  }
+  section.pop_box div section article figure figcaption p {
+    width: 100%;
   }
 }
 @media (max-width: 797px) {

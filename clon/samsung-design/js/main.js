@@ -28,3 +28,9 @@ function li_opens() {
         }
     })
 }
+
+function pops() {
+    $("#popsd").css("display","block")
+    $("#popsd").load("./sub-content/pop.html");
+    $("body").css("overflow-y","hidden")
+}
