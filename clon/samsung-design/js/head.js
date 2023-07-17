@@ -21,6 +21,8 @@ $(document).ready(function () {
     });
 
     $("#mains").click(function () {
+        $(".search-box").slideUp();
+        $(".bg").css("display", "none");
         $("#main").load("./sub-content/main.html");
         let renewURL = window.location.pathname;
         history.pushState(null, null, renewURL);
@@ -30,6 +32,8 @@ $(document).ready(function () {
     $("header nav li").click(function () {
         let id = $(this).attr('id');
         let idx = $(this).index() + 1;
+        $(".search-box").slideUp();
+        $(".bg").css("display", "none");
         $("header nav li").removeClass('underline')
         $("header nav li:nth-of-type(" + idx + ")").addClass('underline')
         $("#main").load("./sub-content/sub_page.html");
@@ -43,6 +47,8 @@ $(document).ready(function () {
     $(".mobile .nav li").click(function () {
         let id = $(this).attr('id');
         let idx = $(this).index() + 1;
+        $(".search-box").slideUp();
+        $(".bg").css("display", "none");
         $("header nav li").removeClass('underline')
         $("header nav li:nth-of-type(" + idx + ")").addClass('underline')
         $("#main").load("./sub-content/sub_page.html");

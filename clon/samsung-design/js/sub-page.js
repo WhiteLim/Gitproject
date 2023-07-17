@@ -28,7 +28,7 @@ function set_list() {
                 if (code == result1) {
                     if (cnt < 9) {
                         html += /* html */ `
-                            <li class="sub" onclick="javascript:pops();" data-aos="fade-up" data-aos-duration="3000">
+                            <li class="sub" onclick="javascript:pops();" data-aos="fade-up" data-aos-duration="1000">
                                     <figure>
                                         <p><img src="./tools/${code}/${img_code}" alt="${img_code}"></p>
                                         <figcaption>
